@@ -8,6 +8,7 @@ export interface Project {
   category: string
   status: ProjectStatus
   futureUrl?: string
+  externalUrl?: string
   introduction: string
   sections: Array<{
     label: string
@@ -44,15 +45,15 @@ export const projects: Project[] = [
     title: 'Fizzy OS',
     description: 'A desktop experience in your browser.',
     category: 'Interactive Web Experience',
-    status: 'In Development',
-    futureUrl: 'https://os.fizzylabs.tech',
+    status: 'Active',
+    futureUrl: 'https://os.fizzylabs.tech/',
     introduction:
       'A playful, desktop-style personal space with draggable windows, small applications, and room to explore.',
     sections: [
       {
         label: 'Current state',
-        title: 'Building in private.',
-        body: 'Fizzy OS v0.1 currently runs locally. Its public home is reserved for os.fizzylabs.tech, but the experience is not online yet.',
+        title: 'Live on the web.',
+        body: 'Fizzy OS v0.1 is available at os.fizzylabs.tech as a standalone browser-based desktop experience.',
       },
       {
         label: 'What it is',
@@ -104,6 +105,28 @@ export const projects: Project[] = [
         body: 'Add music production notes, audio pieces, interactive sketches, or completely unnecessary experiments that were simply fun to make.',
       },
     ],
+  },
+  {
+    number: '04',
+    slug: 'fizzy-avi-creative-index',
+    title: 'fizzy.avi — Creative Index',
+    description: 'A bold, orange-first introduction to my creative world.',
+    category: 'Creative Portfolio / Visual Index',
+    status: 'Active',
+    externalUrl: 'https://fizzy-avi-creative-index.cozypanda4.chatgpt.site/',
+    introduction: 'An expressive first impression for my creative work, with a vibrant orange visual identity.',
+    sections: [],
+  },
+  {
+    number: '05',
+    slug: 'fizzy-avi-portfolio',
+    title: 'fizzy.avi — Portfolio',
+    description: 'A refined, cream-toned home for my professional creative work.',
+    category: 'Creative Portfolio / Professional',
+    status: 'Active',
+    externalUrl: 'https://fizzy-avi-portfolio.cozypanda4.chatgpt.site/',
+    introduction: 'A more professional presentation of my creative work with a restrained cream aesthetic.',
+    sections: [],
   },
 ]
 
