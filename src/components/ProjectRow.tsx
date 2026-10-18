@@ -18,9 +18,11 @@ export function ProjectRow({ project }: { project: Project }) {
     </>
   )
 
-  if (project.slug === 'fizzy-os') {
+  const destination = project.externalUrl ?? (project.slug === 'fizzy-os' ? project.futureUrl : undefined)
+
+  if (destination) {
     return (
-      <a className="project-row" href="https://os.fizzylabs.tech/">
+      <a className="project-row" href={destination}>
         {content}
       </a>
     )
