@@ -3,3 +3,13 @@ dist
 *.tsbuildinfo
 .DS_Store
 *.local
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Logs, coverage and cache
+*.log
+coverage/
+.cache/
