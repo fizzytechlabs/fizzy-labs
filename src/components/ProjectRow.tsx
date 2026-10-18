@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom'
 import type { Project } from '../content/site'
 
 export function ProjectRow({ project }: { project: Project }) {
-  return (
-    <Link className="project-row" to={`/projects/${project.slug}`}>
+  const content = (
+    <>
       <span className="project-number" aria-hidden="true">
         {project.number}
       </span>
@@ -15,6 +15,20 @@ export function ProjectRow({ project }: { project: Project }) {
         ↗
       </span>
       <span className="sr-only">View {project.title}</span>
+    </>
+  )
+
+  if (project.slug === 'fizzy-os') {
+    return (
+      <a className="project-row" href="https://os.fizzylabs.tech/">
+        {content}
+      </a>
+    )
+  }
+
+  return (
+    <Link className="project-row" to={`/projects/${project.slug}`}>
+      {content}
     </Link>
   )
 }
