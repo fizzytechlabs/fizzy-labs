@@ -33,7 +33,7 @@ export const siteConfig = {
     note: 'Planned address — enable this link after the mailbox is configured.',
   },
   socials: [
-    { label: 'github', url: null, note: 'Add your GitHub URL in src/content/site.ts.' },
+    { label: 'github', url: 'https://github.com/fizzytechlabs', note: 'Fizzy Labs on GitHub.' },
     { label: 'instagram', url: null, note: 'Add your Instagram URL in src/content/site.ts.' },
   ] satisfies SocialLink[],
 }

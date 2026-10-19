@@ -436,7 +436,7 @@ main {
   line-height: 1.7;
 }
 
-.coming-soon {
+.project-launch {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   gap: 28px;
@@ -447,11 +447,30 @@ main {
   color: var(--quiet);
   font-family: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 0.66rem;
+  transition: border-color 180ms ease, color 180ms ease;
 }
 
-.coming-soon strong {
+.project-launch strong {
   color: var(--secondary);
   font-weight: 400;
+}
+
+.project-launch > span:last-child {
+  justify-self: end;
+  color: var(--secondary);
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.project-launch:hover,
+.project-launch:focus-visible {
+  border-color: var(--line-active);
+  color: var(--text);
+}
+
+.project-launch:hover > span:last-child,
+.project-launch:focus-visible > span:last-child {
+  color: var(--text);
+  transform: translate(3px, -3px);
 }
 
 .not-found {
@@ -528,7 +547,7 @@ main {
   .project-heading,
   .project-header,
   .project-sections section,
-  .coming-soon {
+  .project-launch {
     grid-template-columns: 1fr;
   }
 
@@ -578,7 +597,7 @@ main {
     max-width: 35rem;
   }
 
-  .coming-soon {
+  .project-launch {
     gap: 10px;
   }
 }

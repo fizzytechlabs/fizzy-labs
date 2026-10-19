@@ -62,12 +62,18 @@ export function ProjectPage() {
           ))}
         </div>
 
-        {project.slug === 'fizzy-os' && (
-          <aside className="coming-soon" aria-label="Fizzy OS launch status">
-            <span>Reserved address</span>
-            <strong>{project.futureUrl?.replace('https://', '')}</strong>
-            <span>coming soon</span>
-          </aside>
+        {project.slug === 'fizzy-os' && project.futureUrl && (
+          <a
+            className="project-launch"
+            href={project.futureUrl}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Open Fizzy OS in a new tab"
+          >
+            <span>Visit project</span>
+            <strong>{project.futureUrl.replace('https://', '')}</strong>
+            <span aria-hidden="true">↗</span>
+          </a>
         )}
       </article>
     </PageShell>
